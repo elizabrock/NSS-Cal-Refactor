@@ -13,8 +13,8 @@ Su Mo Tu We Th Fr Sa
 29 30
 
 EOS
-    calendar = Calendar.new
-    assert_equal(expected, calendar.format_calendar(6,2014))
+    calendar = Calendar.new(6, 2014)
+    assert_equal(expected, calendar.format_calendar)
   end
 
   def test_nothing_2
@@ -28,8 +28,8 @@ Su Mo Tu We Th Fr Sa
 23 24 25 26 27 28
 
 EOS
-    calendar = Calendar.new
-    assert_equal(expected, calendar.format_calendar(2,2014))
+    calendar = Calendar.new(2, 2014)
+    assert_equal(expected, calendar.format_calendar)
   end
 
   def test_nothing_3
@@ -43,7 +43,7 @@ Su Mo Tu We Th Fr Sa
 23 24 25 26 27 28 29
 30 31
 EOS
-    calendar = Calendar.new
-    assert_equal(expected, calendar.format_calendar(1,2000))
+    calendar = Calendar.new(1, 2000)
+    assert_equal(expected, calendar.format_calendar)
   end
 end
