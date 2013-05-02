@@ -1,27 +1,17 @@
 class Calendar
   MONTHS = %w{ January February March April May June July August September October November December }
 
-  def format_calendar(month, year)
-    `cal #{month} #{year}`
-    # unless month and year
-    #   raise ArgumentError
-    # end
+  def initialize(month, year)
+    @month = month
+    @year = year
+  end
 
-    # unless month.to_i > 0 and year.to_i > 0
-    #   raise ArgumentError
-    # end
+  def format_calendar
+    month_header
+  end
 
-    # result =  "#{MONTHS[month.to_i - 1]} #{year}".center(20).rstrip
-    # result << "\nSu Mo Tu We Th Fr Sa\n"
-    # (1..31).each do |i|
-    #   if i < 10
-    #     result << " "
-    #   end
-    #   result << "#{i} "
-    #   if i % 7 == 0
-    #     result << "\n"
-    #   end
-    # end
-    # result << "\n"
+  def month_header
+    month_name = MONTHS[@month - 1]
+    "#{month_name} #{@year}".center(20).rstrip
   end
 end
