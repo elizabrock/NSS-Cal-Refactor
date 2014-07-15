@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'calendar'
+require_relative '../calendar'
 
 class CalendarTest < Test::Unit::TestCase
   def test_nothing

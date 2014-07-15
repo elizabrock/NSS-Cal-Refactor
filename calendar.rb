@@ -29,14 +29,13 @@ class Calendar
       result << "   "
     end
     result << " 1"
-    result
   end
 
   def month_length
     Date.civil(@year, @month, -1).day
   end
 
-  def first_day_position
+  def first_day_position #Zeller's Congruence
     Date.new(@year, @month, 1).wday
   end
 end
